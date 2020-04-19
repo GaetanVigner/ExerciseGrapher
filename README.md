@@ -1,5 +1,9 @@
 # ExerciseGrapher
+## The Project
+I did this little windows WinForm app to answer this tiny following execise.
+It was my first time using Winform and it was a good learning experience even though it's very simple.
 
+## The Exercise
 Please try the following Monte Carlo simulations:
 
 Consider a system with 10,000 bins (boxes). Randomly dropping balls into those bins: one ball at a time, and each bin has equal probability being selected. After 200,000 balls are dropped (i.e., the average number of balls in each bin is 20), plot the histogram of how many bins have certain number of balls, i.e., the graph of n(k) vs. k. Where n(k) is the number of bins with k balls.
@@ -17,3 +21,7 @@ Is the histogram stable? Continue this simulation for another 1 million times, a
 Can you fit a function to this histogram? What is the functional form?
 
 Try a simulation with the initial condition of 40 balls in every bin
+## The Tests
+TODO
+## The Build
+TODO
