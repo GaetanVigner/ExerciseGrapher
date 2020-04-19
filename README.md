@@ -1,4 +1,6 @@
 # ExerciseGrapher
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/GaetanVigner/ExerciseGrapher/blob/master/LICENSE)  
+![](Images/Capture.PNG)
 ## The Project
 I did this little windows WinForm app to answer this tiny following execise.
 It was my first time using Winform and it was a good learning experience even though it's very simple.
