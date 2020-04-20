@@ -26,4 +26,4 @@ Try a simulation with the initial condition of 40 balls in every bin
 ## The Tests
 TODO
 ## The Build
-TODO
+![.NET_Framework_CI](https://github.com/GaetanVigner/ExerciseGrapher/workflows/.NET_Framework_CI/badge.svg)
