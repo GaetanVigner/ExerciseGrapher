@@ -9,13 +9,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 4.7.2
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      #install msbuild
+    - name: setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      #setup nuget
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+    - name: Restore NuGet packages
+      run: nuget restore Graph.sln
+    - name: Build the Solution
+      run: msbuild Graph.sln
