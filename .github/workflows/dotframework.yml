@@ -1,0 +1,21 @@
+name: .NET_Framework_CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      #install msbuild
+    - name: setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      #setup nuget
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+    - name: Restore NuGet packages
+      run: nuget restore Graph.sln
+    - name: Build the Solution
+      run: msbuild Graph.sln
