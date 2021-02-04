@@ -4,6 +4,7 @@
 ## The Project
 I did this little windows WinForm app to answer this tiny following execise.
 It was my first time using Winform and it was a good learning experience even though it's very simple.
+The project was originally .Net Framework 4.6 and was later migrated to .Net (core) 5
 
 ## The Exercise
 Please try the following Monte Carlo simulations:
