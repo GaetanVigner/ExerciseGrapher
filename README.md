@@ -24,6 +24,6 @@ Can you fit a function to this histogram? What is the functional form?
 
 Try a simulation with the initial condition of 40 balls in every bin
 ## The Tests
-![.NET_Framework_CI](https://github.com/GaetanVigner/ExerciseGrapher/workflows/.NET_Framework_CI/badge.svg)
+![.NET](https://github.com/GaetanVigner/ExerciseGrapher/workflows/.NET/badge.svg?branch=master)
 ## The Build
 TODO
