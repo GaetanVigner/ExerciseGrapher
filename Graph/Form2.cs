@@ -5,27 +5,37 @@ namespace Graph
 {
     public partial class Form2 : Form
     {
-        BinThrow bt = new BinThrow();
+        private readonly BinThrow Bt = new();
 
         public Form2()
         {
             InitializeComponent();
+            Bt.Throw = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+            Bt.Bin = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var series = bt.Execute();
-            chart1.Series.Add(series);
+            var series = Bt.Execute();
+            if (series != null)
+            {
+                chart1.Series.Add(series);
+            }
+            else {
+                MessageBox.Show("Values need to be positive integers",
+                                     "Incorrect inputs",
+                                     MessageBoxButtons.OK);
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            bt.Throw = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+            Bt.Throw = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            bt.Bin = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
+            Bt.Bin = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,8 +45,10 @@ namespace Graph
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Index index = new Index();
-            index.Tag = this;
+            Index index = new()
+            {
+                Tag = this
+            };
             index.Show(this);
             Hide();
         }
