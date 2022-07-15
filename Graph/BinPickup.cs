@@ -10,10 +10,12 @@ namespace Graph
         public int Interation { get; set; } = 0;
         public int Bin { get; set; } = 0;
 
-        Random rand = new Random();
+        private readonly Random rand = new();
 
         public Series Execute()
         {
+            if (BinAmount == 0 || Interation == 0 || Bin == 0)
+                return null;
             int[] bins = new int[Bin];
             for (int i = 0; i < bins.Length; i++)
             {
@@ -35,7 +37,7 @@ namespace Graph
                 }
                 bins[index2] += 1;
             }
-            Series s1 = new Series();
+            Series s1 = new();
             for (int i = bins.Min(); i <= bins.Max(); i++)
             {
                 var amount = bins.Where(x => x == i).Count();
